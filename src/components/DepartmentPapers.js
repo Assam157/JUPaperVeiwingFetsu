@@ -9,7 +9,7 @@ function DepartmentPapers({ department }) {
     // Fetch papers from the backend
     const fetchPapers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/get-papers");
+        const response = await fetch("https://jupaperbackend-15hi.onrender.com/get-papers");
         if (!response.ok) {
           throw new Error("Failed to fetch papers");
         }
