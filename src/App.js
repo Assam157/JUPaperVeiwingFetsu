@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import IARForm from "./components/IAR";
@@ -16,6 +16,11 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Jadavpur_University_Logo.svg/220px-Jadavpur_University_Logo.svg.png" 
+            alt="JU Logo" 
+            className="App-logo" 
+          />
           <h1>Department Papers</h1>
           <nav>
             <button>
@@ -54,11 +59,11 @@ function App() {
             <Route path="/vlsi-page" element={<VLSIPage />} />
             <Route path="/it-courseware" element={<ItCourseWarePage />} />
             <Route path="/nano-page" element={<NanoPage />} />
-            <Route path="/control" element={<Control></Control>}/>
-            <Route path="/water-resource" element={<WaterResource/>}/>
-            <Route path="/illumination" element={<Illumination/>}/>
-            <Route path="/enviromental-sceinces" element={<EnviromentalSciences/>}/>
-            <Route path="/other" element={<Other/>}/>
+            <Route path="/control" element={<Control></Control>} />
+            <Route path="/water-resource" element={<WaterResource />} />
+            <Route path="/illumination" element={<Illumination />} />
+            <Route path="/enviromental-sceinces" element={<EnviromentalSciences />} />
+            <Route path="/other" element={<Other />} />
           </Routes>
         </main>
       </div>
@@ -67,4 +72,5 @@ function App() {
 }
 
 export default App;
+
 
