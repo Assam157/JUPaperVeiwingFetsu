@@ -46,7 +46,8 @@ function DepartmentPapers({ department }) {
   }
 
   return (
-    <div>
+    <div className="Department-Papers">
+      <div className="paper-content"> 
       <h1>Papers for Department: {department}</h1>
       {papers.length > 0 ? (
         <ul>
@@ -72,6 +73,7 @@ function DepartmentPapers({ department }) {
         <p>No papers found for the {department} department.</p>
       )}
     </div>
+      </div>
   );
 }
 
