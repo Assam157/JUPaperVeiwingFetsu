@@ -5,6 +5,11 @@ import IARForm from "./components/IAR";
 import VLSIPage from "./components/VLSI";
 import ItCourseWarePage from "./components/ItCourseWare";
 import NanoPage from "./components/Nano";
+import Control from "./components/Control";
+import WaterResource from "./components/WaterResource";
+import Illumination from "./components/Illumination";
+import Other from "./components/Other";
+import EnviromentalSciences from "./components/EnviromentalSciences";
 
 function App() {
   return (
@@ -25,6 +30,21 @@ function App() {
             <button>
               <Link to="/nano-page">Nano</Link>
             </button>
+            <button>
+              <Link to="/illumination">Illumination</Link>
+            </button>
+            <button>
+              <Link to="/water-resource">WaterResource</Link>
+            </button>
+            <button>
+              <Link to="/enviromental-sceinces">EnviromentalSceinces</Link>
+            </button>
+            <button>
+              <Link to="/control">Control</Link>
+            </button>
+            <button>
+              <Link to="/other">Other</Link>
+            </button>
           </nav>
         </header>
 
@@ -34,6 +54,11 @@ function App() {
             <Route path="/vlsi-page" element={<VLSIPage />} />
             <Route path="/it-courseware" element={<ItCourseWarePage />} />
             <Route path="/nano-page" element={<NanoPage />} />
+            <Route path="/control" element={<Control></Control>}/>
+            <Route path="/water-resource" element={<WaterResource/>}/>
+            <Route path="/illumination" element={<Illumination/>}/>
+            <Route path="/enviromental-sceinces" element={<EnviromentalSciences/>}/>
+            <Route path="/other" element={<Other/>}/>
           </Routes>
         </main>
       </div>
@@ -42,3 +67,4 @@ function App() {
 }
 
 export default App;
+
