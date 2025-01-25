@@ -5,16 +5,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin-bottom: 20px;
+  animation: none; /* Removed spinning animation */
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34; /* Restored original background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +20,54 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.App-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+.Department-Papers {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  min-height: 80vh;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-62mj8obAanGWZuPMTH7EgoWjWn8aaEmkNA&s');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.Department-Papers .paper-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3); /* White background with transparency */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Glass effect: blurs the background image */
+  padding: 20px;
+  color: #333;
+  z-index: 1; /* Ensure content is above background */
+}
+
+/* Additional styling for paper content */
+.Department-Papers .paper-content h2,
+.Department-Papers .paper-content p {
+  z-index: 2;
+  color: #333; /* Dark text for readability */
 }
