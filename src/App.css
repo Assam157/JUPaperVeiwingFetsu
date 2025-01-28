@@ -1,4 +1,4 @@
-.App {
+  .App {
   text-align: center;
 }
 
@@ -49,6 +49,7 @@
   background-position: center;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  overflow: hidden; /* Prevent content from overflowing the container */
 }
 
 .Department-Papers .paper-content {
@@ -63,11 +64,26 @@
   padding: 20px;
   color: #333;
   z-index: 1; /* Ensure content is above background */
+  overflow-y: auto; /* Enable vertical scrolling for overflowing content */
 }
 
-/* Additional styling for paper content */
 .Department-Papers .paper-content h2,
 .Department-Papers .paper-content p {
   z-index: 2;
   color: #333; /* Dark text for readability */
+  margin: 0 0 10px; /* Add some spacing between elements */
+  word-wrap: break-word; /* Ensure long words wrap and don't overflow */
+}
+
+.Department-Papers .paper-content::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.Department-Papers .paper-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); /* Darker thumb for better visibility */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+}
+
+.Department-Papers .paper-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker thumb on hover */
 }
